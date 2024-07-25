@@ -17,5 +17,18 @@ sizeForm.addEventListener("submit", (e) => {
         const gridItem = document.createElement('div');
         gridItem.className = "grid-item";
         gridContainer.append(gridItem);
+        gridItem.addEventListener("mouseover", changeColor);
     }
+});
+
+function changeColor(e){
+    const colorSelect = document.getElementById("colorSelect");
+    const color = colorSelect.options[colorSelect.selectedIndex].value;
+    e.target.style.backgroundColor = color;
+}
+
+let reset = document.getElementById("reset");
+
+reset.addEventListener("mousedown", () => {
+    gridContainer.innerHTML = '';
 });
