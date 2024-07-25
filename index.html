@@ -9,13 +9,16 @@
 <body>
     <h1 id="etch">Etch-a-Sketch</h1>
     <h2>Choose size of Etch-a-Sketch: </h2>
-    <form id="sizeSelector">
+    <form action="sizeSelector" id="sizeForm">
         Grid height:
         <input type="number" id="inputHeight" name="height" min="1" value="1">
         Grid width:
         <input type="number" id="inputWidth" name="width" min="1" value="1">
+        <button type="submit">Submit</button>
     </form>
-    <div class="grid" id="myGrid"></div>
+    <div class="container">
+        <div class="grid" id="myGrid"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

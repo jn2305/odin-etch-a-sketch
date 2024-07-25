@@ -1,12 +1,21 @@
 const gridContainer = document.getElementById("myGrid");
 
-const rows = 16;
-const cols = 16;
+let sizeForm = document.getElementById("sizeForm");
 
-for (let i = 0; i < rows; i++){
-    for(let j = 0; j < cols; j++){
+sizeForm.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+
+    gridContainer.innerHTML = '';
+
+    let rows = parseInt(document.getElementById("inputHeight").value);
+    let cols = parseInt(document.getElementById("inputWidth").value);
+
+    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
+    gridContainer.style.gridTemplateRows = `repeat(${rows}, 40px)`;
+
+    for (let i = 0; i < rows * cols; i++) {
         const gridItem = document.createElement('div');
         gridItem.className = "grid-item";
         gridContainer.append(gridItem);
     }
-}
+});
