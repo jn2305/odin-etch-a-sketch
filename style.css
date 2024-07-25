@@ -1,0 +1,29 @@
+.grid{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:repeat(16, 40px);
+    grid-template-rows: repeat(16, 40px);
+    margin:0;
+    padding:0;
+}
+.grid-item{
+    display:flex;
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border:1px solid black;
+    text-align: center;
+    gap:0;
+    margin:0;
+    padding:0;
+}
+#etch{
+    text-align: center;
+    font-size: 40px;
+    font-family: fantasy;
+}
+body, html{
+    background-color: lightblue;
+    height: 100%;
+}
